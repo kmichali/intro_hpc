@@ -1,0 +1,12 @@
+#PBS -l walltime=24:00:00
+#PBS -l select=4:ncpus=12:mem=24gb
+
+# a hypothetical  example of an MPI submit script that uses 4x12 processes
+# and 4x24gb of RAM
+
+module load mpi
+module load mympiprog
+
+cd $PBS_O_WORKDIR
+mpiexec mympiprog  
+

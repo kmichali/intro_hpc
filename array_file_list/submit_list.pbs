@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#PBS -l walltime=00:10:00
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -J 1-6
+
+cd $PBS_O_WORKDIR
+INFILE=$(head -n $PBS_ARRAY_INDEX list | tail -n 1)
+
+echo $INFILE
+# add your command line here
+
+
+
+
+
+
+
+
